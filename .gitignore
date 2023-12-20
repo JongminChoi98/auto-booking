@@ -2,3 +2,4 @@ env/
 .DS_Store
 chromedriver
 __pycache__/
+cfg_dev.py
