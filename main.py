@@ -18,6 +18,18 @@ pw_input_element = driver.find_element(By.ID, "login_pw").send_keys(cfg_dev.PWD)
 login_button = driver.find_element(By.CLASS_NAME, "bt_login").click()
 driver.switch_to.alert.accept()
 
+## booking process
+reservation_link_button = driver.find_element(
+    By.CSS_SELECTOR, "div[class='quick_area'] > a:first-child"
+).click()
+
+# Sample
+want_to_go_data = 20240106
+
+reservation_data_button = driver.find_element(
+    By.CSS_SELECTOR, f"a[href*='{want_to_go_data}']"
+).click()
+
 time.sleep(10)
 
 driver.quit()
